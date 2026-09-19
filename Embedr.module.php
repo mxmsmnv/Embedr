@@ -11,8 +11,6 @@ require_once __DIR__ . '/EmbedrTypes.php';
  */
 class Embedr extends WireData implements Module, ConfigurableModule {
 
-    public const VERSION = '0.4.0';
-
     protected static $defaultConfig = [
         'componentsPath' => 'components/',
         'openTag' => '((',
@@ -32,7 +30,7 @@ class Embedr extends WireData implements Module, ConfigurableModule {
     public static function getModuleInfo() {
         return [
             'title' => 'Embedr',
-            'version' => self::VERSION,
+            'version' => '0.4.0',
             'summary' => 'Reusable embeds and field-backed content blocks',
             'author' => 'Maxim Semenov',
             'href' => 'https://smnv.org',
