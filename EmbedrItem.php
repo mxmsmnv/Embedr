@@ -178,11 +178,6 @@ class EmbedrItem extends WireData {
                 ));
             }
 
-            if(!$items->count()) {
-                if($debugMode) $this->wire('log')->save('embedr-debug', '[Embedr::render] No items found');
-                return "<!-- Embedr: No items found -->";
-            }
-
             if($type->template && $type->templateExists()) {
                 $templatePath = $type->getTemplatePath();
 
@@ -234,6 +229,11 @@ class EmbedrItem extends WireData {
                 }
 
             } else {
+                if(!$items->count()) {
+                    if($debugMode) $this->wire('log')->save('embedr-debug', '[Embedr::render] No items found');
+                    return "<!-- Embedr: No items found -->";
+                }
+
                 if($debugMode) {
                     $reason = $type->template ? 'template file not found' : 'no template specified';
                     $this->wire('log')->save('embedr-debug', '[Embedr::render] Using visual renderer (' . $reason . ')');

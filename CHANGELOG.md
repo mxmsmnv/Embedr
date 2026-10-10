@@ -5,6 +5,13 @@ Format: [SemVer](https://semver.org) — newest first.
 
 ---
 
+## [0.4.1] — 2026-10-09
+
+### Changed
+- Custom PHP templates now receive an empty `PageArray` when a selector has no
+  matches, allowing site-owned renderers to provide an accessible empty state.
+- The built-in visual renderer keeps its existing empty-result HTML comment.
+
 ## [0.4.0] — 2026-07-28
 
 ### Added

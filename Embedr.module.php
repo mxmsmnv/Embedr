@@ -30,7 +30,7 @@ class Embedr extends WireData implements Module, ConfigurableModule {
     public static function getModuleInfo() {
         return [
             'title' => 'Embedr',
-            'version' => '0.4.0',
+            'version' => '0.4.1',
             'summary' => 'Reusable embeds and field-backed content blocks',
             'author' => 'Maxim Semenov',
             'href' => 'https://smnv.org',

@@ -221,6 +221,9 @@ $embed      // EmbedrItem - The embed object
 $embedContext // array - Optional context passed to Embedr::render()
 ```
 
+Custom templates are also called when the selector returns no pages. Check
+`$items->count()` and render the empty state appropriate for the host site.
+
 ### Basic Template Example
 
 ```php
